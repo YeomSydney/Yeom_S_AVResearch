@@ -5,7 +5,9 @@ Seunghyeon Yeom (0975764)
 
 ## Description
 
-## Audio & Video
+## Audio & Functionality
+* Audio:
+* Functionality: The lyrics are fetching 
 
 ## Brand Guideline
 ### Colour Scheme
