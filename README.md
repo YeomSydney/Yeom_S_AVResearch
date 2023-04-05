@@ -4,17 +4,42 @@
 Seunghyeon Yeom (0975764)
 
 ## Description
+Create and deploy a fully accessible Node/Express media application using two pieces of multimedia (1 audio file, 1 video file).
+
+## Functionality Document
+https://docs.google.com/document/d/1atbWzabFtLT9kifheoEWgyPw1t0ZZq2n1VFmggzPAoU/edit?usp=sharing
 
 ## Audio & Functionality
-* Audio:
-* Functionality: The lyrics are fetching 
+* Audio: The Song, "2002" by Anne Marie
+* Functionalities:
+1. Lyrics displayed.
+2. Customized controller displayed.
+3. Font size of lyrics can be changed: Default (1rem), Medium(1.3rem), Large(1.7rem).
+4. Music automatically playing when the music is selected.
+
+## Video & Functionality
+* Video: The Movie Teaser Trailer, "Interstellar" by Christopher Nolan
+* Functionalities:
+1. Transcript displayed and can be downloaded.
+2. Customized controller displayed.
+3. Font size of transcript can be changed: Default (1rem), Medium(1.3rem), Large(1.7rem).
+4. Caption can be manually added.
 
 ## Brand Guideline
 ### Colour Scheme
+* #002464 (Navy)
+* #0088ff (Blue)
+* #ffffff (White)
 
 ### Typography
+* Manrope (Google Font)
+* Regular: Paragraph
+* Medium & Bold: Headings & Emphasis
 
-### Web Designs
+### Reference | Web Designs
+* Pinterest
+* Dribbble
+* Behance
 
 ## MIT License
 Copyright 2023 Seunghyeon Yeom
