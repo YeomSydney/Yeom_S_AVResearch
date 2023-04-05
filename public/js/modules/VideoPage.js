@@ -18,11 +18,11 @@ export default {
 
                     <div class="video-controller-status">
                         <div class="video-controller">
-                            <button @click="rewind"> 10s</button>
-                            <button @click="play">Play</button>
-                            <button @click="pause">Pause</button>
-                            <button @click="stop">Stop</button>
-                            <button @click="forward"> 10s</button>
+                            <button @click="rewind"><i class="ri-skip-back-line"></i></button>
+                            <button @click="play"><i class="ri-play-mini-fill"></i></button>
+                            <button @click="pause"><i class="ri-pause-mini-fill"></i></button>
+                            <button @click="stop"><i class="ri-stop-circle-line"></i></button>
+                            <button @click="forward"><i class="ri-skip-forward-line"></i></button>
                         </div>
 
                         <div class="time-remaining">

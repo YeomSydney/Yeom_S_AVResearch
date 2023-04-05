@@ -199,14 +199,14 @@ export default {
                         <i class="ri-skip-forward-line"></i>
                     </button>
 
-                    <button @click="stop">Stop</button>
-                    
-                    <button @click="loopAudio">
-                        {{ loop ? 'Disable' : 'Enable' }} Loop
-                    </button>
+                    <button @click="stop"><i class="ri-stop-circle-line"></i></button>
                 </div>
                 
                 <div class="time-remaining">
+                    <button @click="loopAudio">
+                        {{ loop ? 'Disable' : 'Enable' }} Loop
+                    </button>
+
                     {{ timeRemaining }}
                 </div>
             </div>

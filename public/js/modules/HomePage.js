@@ -20,10 +20,10 @@ export default {
 
                     <router-link class="router-link" to="/video">
                         <div class="rec-slide">
-                            <img src="./public/images/music-album-anne-marie.jpg">
+                            <img src="./public/images/interstellar.png">
                             <div class="song-details">
-                                <h3>2002</h3>
-                                <p>Anne Marie</p>
+                                <h3>Interstellar Teaser</h3>
+                                <p>Christopher Nolan</p>
                             </div>
                         </div>
                     </router-link>
