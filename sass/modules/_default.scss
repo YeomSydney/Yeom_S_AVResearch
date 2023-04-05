@@ -24,6 +24,15 @@ p {
     font-weight: 300;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -43,15 +52,14 @@ main {
 
     .main-container {
         margin: 0 auto;
-        max-width: 400px;
-        min-height: 700px;
+        width: 400px;
+        height: 700px;
+
         border-radius: 20px;
         position: relative;
         filter: drop-shadow(0 10px 10px #00000030);
-        
-        // background-color: #FFFFFF80;
-        background-color: #fff;
-        // box-shadow: inset 0 0 20px #e2efff;
+
+        background-color: #ffffff;
 
         // Inner Blur Motion
         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -69,10 +77,14 @@ main {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                background-color: #fff;
+                background-color: #ff4f1e;
                 filter: drop-shadow(0 2px 4px #00000010);
-                border-radius: 20px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
                 z-index: 100;
+                color: white;
         
                 h2 {
                     font-weight: 400;
@@ -87,9 +99,10 @@ main {
         
                     i {
                         transition: all .2s ease-in;
+                        color: white;
         
                         &:hover {
-                            color: #e3e3e3;
+                            color: #000000;
                         }
                     }
                 }
@@ -98,7 +111,8 @@ main {
             .views {
                 margin: 20px auto;
                 padding: 20px;
-                overflow-y: scroll;
+
+                overflow: scroll;
 
                 // Home
                 .media-boxes {
@@ -184,10 +198,54 @@ main {
                 .media-content-upcoming {
                     margin: 10px 0;
                     
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    row-gap: 10px;
+                }
+
+                // Music
+                .music-av-app {
+                    overflow: hidden;
+
+                    .music-box-container {
+                        padding: 20px 0 100px 0;
+                        overflow: scroll;
+                    }
+
+                    .music-lyrics {
+                        transition: all .2s ease-in;
+
+                        &:hover {
+
+                        }
+                    }
+
+                    .lyrics {
+                        .btn {
+                            padding: 10px;
+                            color: black;
+                            background-color: white;
+                            filter: drop-shadow(0 2px 4px #00000030);
+                        }
+                    }
+
+                    .lyrics .buttons .btn .active {
+                        background-color: #ff4f1e;
+                        color: white;
+                    }
+
+                    .lyrics .buttons .btn:nth-child(2) {
+                        font-size: 1.5rem;
+                    }
+
+                    .lyrics .buttons .btn:nth-child(3) {
+                        font-size: 1.8rem;
+                    }
+
+                    .lyrics .lyrics-box {
+                        font-size: 1rem;
+                        color: black;
+                        line-height: 22px;
+                        transition: all .2s ease-in;
+                        text-align: justify;
+                    }
                 }
             }
         }
@@ -195,7 +253,6 @@ main {
         // Audio/Video
         .app-details {
             margin: 40px 0 0 0;
-            overflow-y: scroll;
 
             .title { 
                 display: flex;
@@ -251,7 +308,6 @@ main {
         }
 
         .selection {
-            background-color: #FFF;
             z-index: 10;
             
             nav {
@@ -259,15 +315,18 @@ main {
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-color: #FFF;
-                border-radius: 20px 20px;
+                background-color: #ff4f1e;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
 
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 padding: 20px 50px;
 
-                filter: drop-shadow(0 -8px 8px #00000005);
+                filter: drop-shadow(0 -8px 8px #00000020);
 
                 .router-link {
                     display: flex;
@@ -279,9 +338,10 @@ main {
                 i {
                     font-size: 1.4rem;
                     transition: all .2s ease-in;
+                    color: white;
 
                     &:hover {
-                        color: #e3e3e3;
+                        color: #000;
                     }
                 }
             }
@@ -289,6 +349,7 @@ main {
             p {
                 font-size: 12px;
                 font-weight: 300;
+                color: white;
             }
         }
     }

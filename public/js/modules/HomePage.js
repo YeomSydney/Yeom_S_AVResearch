@@ -34,12 +34,6 @@ export default {
 
             <div class="media-content-upcoming">
                 <div class="each-media-upcoming">
-                    <img src="">
-
-                    <div class="text-box-upcoming">
-                        <h3 class="media-title-p">Music Name Goes Here</h3>
-                        <p class="author-singer">singers</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -49,35 +43,35 @@ export default {
 
             <div class="media-content-upcoming">
                 <div class="each-media-upcoming">
-                    <img src="">
-
-                    <div class="text-box-upcoming">
-                        <h3 class="media-title-p">Music Name Goes Here</h3>
-                        <p class="author-singer">singers</p>
-                    </div>
-                </div>
-
-                <div class="each-media-upcoming">
-                    <img src="">
-
-                    <div class="text-box-upcoming">
-                        <h3 class="media-title-p">Music Name Goes Here</h3>
-                        <p class="author-singer">singers</p>
-                    </div>
-                </div>
-
-                <div class="each-media-upcoming">
-                    <img src="">
-
-                    <div class="text-box-upcoming">
-                        <h3 class="media-title-p">Music Name Goes Here</h3>
-                        <p class="author-singer">singers</p>
-                    </div>
                 </div>
             </div>
         </section>
     </section>
     `,
+
+    created() {
+        // fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=4&limit=100', options)
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const Track = data.items;
+
+        //         Track.map((item) => {
+        //             // console.log(item)
+
+        //             const thumbnail = item.track.album.images.url;
+        //             const trackTitle = item.track.name;
+        //             const artist = item.track.artists.name;
+        //             const Playlist = 
+        //             `<li class="top-music-track">
+        //                 <img src="${thumbnail}">
+        //                 <h2>${trackTitle}</h2>
+        //                 <h3>${artist}</h3>
+        //             </li>`
+        //             document.querySelector('.each-media-upcoming').innerHTML += Playlist;
+        //         })
+        //     })
+        // .catch(err => console.error(err));
+    },
 
     data: function() {
         return {
@@ -90,3 +84,12 @@ export default {
         }
     }
 }
+
+// Fetching
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'd66fcf92e0mshd306243da2a84f1p185adajsn6d81fb446ed8',
+		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+	}
+};

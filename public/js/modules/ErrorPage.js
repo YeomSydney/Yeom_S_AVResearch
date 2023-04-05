@@ -2,7 +2,6 @@ export default {
     name: 'ErrorPage',
 
     created() {
-        console.log('hit a route that does not exist');
         // tell this function what the Vue instance is
         let vm = this;
 
