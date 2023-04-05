@@ -1,11 +1,24 @@
 // imports always go at the top
 import Home from './modules/HomePage.js';
 import Music from './modules/MusicPage.js';
+// import Lyrics from './modules/MusicLyrics.js';
 import Video from './modules/VideoPage.js';
 import ErrorPage from './modules/ErrorPage.js';
 
 const { createApp } = Vue; 
 // import the createApp method from the Vue library
+
+// createApp({
+//     created() {
+//         console.log('show the lyrics');
+//     },
+
+//     data() {
+//         return {
+//             showLyrics: false
+//         }
+//     }
+// })
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
@@ -26,6 +39,12 @@ const router = VueRouter.createRouter({
             name: 'music', // name is for programmatic navigation
             component: Music // the component to render
         },
+
+        // {
+        //     path: '/lyrics', // browser location bar looks like this
+        //     name: 'lyrics', // name is for programmatic navigation
+        //     component: Lyrics // the component to render
+        // },
 
         { 
             path: '/video', // browser location bar looks like this
@@ -58,3 +77,28 @@ const router = VueRouter.createRouter({
   // whole app router-aware.
 app.use(router);  
 app.mount('#app');
+
+// Search Bar
+const toggleSearch = (search, button) => {
+    const   searchBar = document.getElementById(search),
+            searchButton = document.getElementById(button)
+
+    searchButton.addEventListener('click', () => {
+        // Adding the show-search class, the search bar will expand.
+        searchBar.classList.toggle('show-search');
+    })
+}
+
+toggleSearch('search-bar', 'search-button')
+
+// Change Font Size
+let btnFont = document.querySelector('.btn-change-fontsize');
+let btnEachFont = btnFont.querySelectorAll('.btn-font');
+
+for (var i = 0; i < btnEachFont.length; i++) {
+    btnEachFont[i].addEventListener('click', function() {
+        let current = document.getElementsByClassName('active');
+        current[0].className = current[0].className.replace("active", "");
+        this.className += " active";
+    })
+}

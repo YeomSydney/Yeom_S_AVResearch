@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/main.css">
 
-    <title>AV Research</title>
+    <title>AV App</title>
 </head>
 
 <body>
@@ -15,27 +15,40 @@
         <h1 class="hidden">AV Research</h1>
 
         <section class="main-container">
-            <section class="play-list-content">
-                <section class="player-top">
-                    <div class="down-arrow"><i class="ri-arrow-down-s-line"></i></div>
-                    <div><h2>Your Playlist</h2></div>
-                    <div class="play-list-icon">
-                        <router-link to="/"><i class="ri-play-list-line"></i></router-link>
-                    </div>
-                </section>
-        
-                <section class="views">
-                    <router-view></router-view>
-                </section>
-            </section>
+            <nav class="main-nav">
+                <div class="logo">
+                    <router-link class="router-link" to="/">
+                        <i class="ri-disc-line"></i>
+                    </router-link>
+                </div>
 
-            <section class="selection">
-                <nav>
-                    <router-link class="router-link" to="/"><i class="ri-home-line"></i><p>Home</p></router-link>
-                    <router-link class="router-link" to="/music"><i class="ri-disc-line"></i><p>Music</p></router-link>
-                    <router-link class="router-link" to="/video"><i class="ri-movie-2-line"></i><p>Video</p></router-link>
-                </nav>
-            </section>
+                <div class="search-box">
+                    <form action="https://www.google.com/search" class="search" id="search-bar" target="_blank">
+                        <input type="search" placeholder="Search for song, artists, etc... Hit return when you're ready." name="q" class="search__input">
+        
+                        <!-- <div class="search__button" id="search-button">
+                            <i class="ri-search-2-line search__icon"></i>
+                            <i class="ri-close-line search__close"></i>
+                        </div> -->
+                    </form>
+                </div>
+
+                <div class="nav-bar">
+                    <router-link class="router-link" to="/">
+                        <i class="ri-home-line"></i>
+                    </router-link>
+                    <router-link class="router-link" to="/music">
+                        <i class="ri-music-2-line"></i>
+                    </router-link>
+                    <router-link class="router-link" to="/video">
+                        <i class="ri-movie-2-line"></i>
+                    </router-link>
+                </div>
+            </nav>
+
+            <div class="views">
+                <router-view></router-view>
+            </div>
         </section>
     </main>
     

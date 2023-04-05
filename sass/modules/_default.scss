@@ -20,8 +20,7 @@ img {
 }
 
 p {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 14px;
 }
 
 h1,
@@ -32,263 +31,741 @@ h5,
 h6,
 p,
 a {
-    font-weight: 300;
+    font-weight: 200;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+// main {
+//     text-align: center;
+//     font-family: 'Poppins', 'Helvetica', 'Calibri';
+//     margin: 50px 0;
+
+
+//     .main-container {
+//         margin: 0 auto;
+//         max-width: 400px;
+//         min-height: 700px;
+//         border-radius: 20px;
+//         position: relative;
+//         filter: drop-shadow(0 10px 10px #00000030);
+        
+//         // background-color: #FFFFFF80;
+//         background-color: #fff;
+//         // box-shadow: inset 0 0 20px #e2efff;
+
+//         // Inner Blur Motion
+//         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+//             .main-container {
+//                 -webkit-backdrop-filter: blur(15px);
+//                 backdrop-filter: blur(15px);
+//                 // background: #F2F2F270;
+//                 filter: drop-shadow(0 3px 3px #00000020);
+//             }
+//         }
+
+//         .play-list-content {
+//             .player-top {
+//                 padding: 30px 20px 20px 20px;
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: space-between;
+//                 background-color: #fff;
+//                 filter: drop-shadow(0 2px 4px #00000010);
+//                 border-radius: 20px;
+//                 z-index: 100;
+        
+//                 h2 {
+//                     font-weight: 400;
+//                 }
+        
+//                 .down-arrow {
+//                     font-size: 1.4rem;
+//                 }
+        
+//                 .play-list-icon {
+//                     font-size: 1.2rem;
+        
+//                     i {
+//                         transition: all .2s ease-in;
+        
+//                         &:hover {
+//                             color: #e3e3e3;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             .views {
+//                 margin: 20px auto;
+//                 padding: 20px;
+//                 overflow-y: scroll;
+
+//                 // Home
+//                 .media-boxes {
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: center;
+//                     row-gap: 20px;
+//                 }
+
+//                 .media-box {
+//                     h2 {
+//                         font-size: 14px;
+//                         font-weight: 300;
+//                         text-align: left;
+//                     }
+//                 }
+
+//                 .media-content {
+//                     margin: 10px 0;
+
+//                     display: flex;
+//                     flex-direction: row;
+//                     justify-content: space-between;
+
+//                     .media-hover {
+//                         background-color: #fff;
+//                         transition: all .2s ease-in;
+//                         border-radius: 10px;
+
+//                         .each-media {
+//                             display: flex;
+//                             flex-direction: column;
+//                             justify-content: flex-start;
+//                             align-items: center;
+//                             padding: 10px 0;
+//                             width: 160px;
+    
+//                             img {
+//                                 width: 160px;
+//                                 height: 160px;
+//                                 object-fit: cover;
+//                                 border-radius: 10px;
+//                                 margin-bottom: 10px;
+//                                 transition: all .2s ease-in;
+
+//                                 filter: drop-shadow(0 10px 10px #00000030);
+//                             }
+
+//                             .text-box {
+//                                 display: flex;
+//                                 flex-direction: column;
+//                                 text-align: left;
+//                                 row-gap: 8px;
+//                                 transition: all .2s ease-in;
+    
+//                                 .media-title-p {
+//                                     font-size: 18px;
+//                                     font-weight: 500;
+//                                     line-height: 22px;
+//                                 }
+    
+//                                 .author-singer {
+//                                     font-size: 12px;
+//                                     font-weight: 300;
+//                                     color: #777777;
+//                                 }
+//                             }
+//                         }
+
+//                         &:hover {
+//                             img {
+//                                 filter: brightness(.85);
+//                                 transform: scale(.97);
+//                             }
+
+//                             .text-box {
+//                                 color: #777777;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .media-content-upcoming {
+//                     margin: 10px 0;
+                    
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: center;
+//                     row-gap: 10px;
+//                 }
+//             }
+//         }
+
+//         // Audio/Video
+//         .app-details {
+//             margin: 40px 0 0 0;
+//             overflow-y: scroll;
+
+//             .title { 
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: center;
+//                 column-gap: 4px;
+//                 align-items: center;
+
+//                 h3 {
+//                     font-weight: 300;
+//                 }
+//             }
+
+//             .music-title {
+//                 h3 {
+//                     font-weight: 500;
+//                 }
+                
+//                 p {
+//                     font-size: 12px;
+//                     font-weight: 300;
+//                     padding: 4px 0;
+//                     color: #777777;
+//                 }
+//             }
+
+//             .play-controller {
+//                 padding: 0 20px;
+//                 margin: 20px 0;
+
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: center;
+//                 column-gap: 50px;
+
+//                 align-items: center;
+
+//                 i {
+//                     font-size: 2rem;
+//                 }
+
+//                 .play i {
+//                     font-size: 4.5rem;
+//                 }
+//             }
+//         }
+
+//         .album {
+//             border-radius: 10px;
+//             background-color: #e3e3e3;
+//             filter: drop-shadow(0px 14px 10px #00000025);
+//             max-width: 300px;
+//         }
+
+//         .selection {
+//             background-color: #FFF;
+//             z-index: 10;
+            
+//             nav {
+//                 position: absolute;
+//                 bottom: 0;
+//                 left: 0;
+//                 right: 0;
+//                 background-color: #FFF;
+//                 border-radius: 20px 20px;
+
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: space-between;
+//                 padding: 20px 50px;
+
+//                 filter: drop-shadow(0 -8px 8px #00000005);
+
+//                 .router-link {
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: center;
+//                     row-gap: 4px;
+//                 }
+
+//                 i {
+//                     font-size: 1.4rem;
+//                     transition: all .2s ease-in;
+
+//                     &:hover {
+//                         color: #e3e3e3;
+//                     }
+//                 }
+//             }
+
+//             p {
+//                 font-size: 12px;
+//                 font-weight: 300;
+//             }
+//         }
+//     }
+// }
+
+body {
+    // background-color: #e7f5ff;
 }
 
 main {
     text-align: center;
-    font-family: 'Poppins', 'Helvetica', 'Calibri';
+    font-family: 'Manrope', 'Helvetica', 'Calibri';
     margin: 50px 0;
 
-
     .main-container {
-        margin: 0 auto;
-        max-width: 400px;
-        min-height: 700px;
-        border-radius: 20px;
-        position: relative;
-        filter: drop-shadow(0 10px 10px #00000030);
-        
-        // background-color: #FFFFFF80;
-        background-color: #fff;
-        // box-shadow: inset 0 0 20px #e2efff;
+        margin: 0 50px;
 
-        // Inner Blur Motion
-        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-            .main-container {
-                -webkit-backdrop-filter: blur(15px);
-                backdrop-filter: blur(15px);
-                // background: #F2F2F270;
-                filter: drop-shadow(0 3px 3px #00000020);
-            }
-        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 40px;
 
-        .play-list-content {
-            .player-top {
-                padding: 30px 20px 20px 20px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                background-color: #fff;
-                filter: drop-shadow(0 2px 4px #00000010);
-                border-radius: 20px;
-                z-index: 100;
-        
-                h2 {
-                    font-weight: 400;
-                }
-        
-                .down-arrow {
-                    font-size: 1.4rem;
-                }
-        
-                .play-list-icon {
-                    font-size: 1.2rem;
-        
-                    i {
-                        transition: all .2s ease-in;
-        
-                        &:hover {
-                            color: #e3e3e3;
-                        }
-                    }
-                }
-            }
-
-            .views {
-                margin: 20px auto;
-                padding: 20px;
-                overflow-y: scroll;
-
-                // Home
-                .media-boxes {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    row-gap: 20px;
-                }
-
-                .media-box {
-                    h2 {
-                        font-size: 14px;
-                        font-weight: 300;
-                        text-align: left;
-                    }
-                }
-
-                .media-content {
-                    margin: 10px 0;
-
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-
-                    .media-hover {
-                        background-color: #fff;
-                        transition: all .2s ease-in;
-                        border-radius: 10px;
-
-                        .each-media {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-start;
-                            align-items: center;
-                            padding: 10px 0;
-                            width: 160px;
-    
-                            img {
-                                width: 160px;
-                                height: 160px;
-                                object-fit: cover;
-                                border-radius: 10px;
-                                margin-bottom: 10px;
-                                transition: all .2s ease-in;
-
-                                filter: drop-shadow(0 10px 10px #00000030);
-                            }
-
-                            .text-box {
-                                display: flex;
-                                flex-direction: column;
-                                text-align: left;
-                                row-gap: 8px;
-                                transition: all .2s ease-in;
-    
-                                .media-title-p {
-                                    font-size: 18px;
-                                    font-weight: 500;
-                                    line-height: 22px;
-                                }
-    
-                                .author-singer {
-                                    font-size: 12px;
-                                    font-weight: 300;
-                                    color: #777777;
-                                }
-                            }
-                        }
-
-                        &:hover {
-                            img {
-                                filter: brightness(.85);
-                                transform: scale(.97);
-                            }
-
-                            .text-box {
-                                color: #777777;
-                            }
-                        }
-                    }
-                }
-
-                .media-content-upcoming {
-                    margin: 10px 0;
-                    
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    row-gap: 10px;
-                }
-            }
-        }
-
-        // Audio/Video
-        .app-details {
-            margin: 40px 0 0 0;
-            overflow-y: scroll;
-
-            .title { 
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                column-gap: 4px;
-                align-items: center;
-
-                h3 {
-                    font-weight: 300;
-                }
-            }
-
-            .music-title {
-                h3 {
-                    font-weight: 500;
-                }
-                
-                p {
-                    font-size: 12px;
-                    font-weight: 300;
-                    padding: 4px 0;
-                    color: #777777;
-                }
-            }
-
-            .play-controller {
-                padding: 0 20px;
-                margin: 20px 0;
-
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                column-gap: 50px;
-
-                align-items: center;
+            .logo {
+                background-color: #0088ff;
+                padding: 10px;
+                border-radius: 100px;
+                filter: drop-shadow(0 2px 4px #97d6ff10);
 
                 i {
                     font-size: 2rem;
-                }
-
-                .play i {
-                    font-size: 4.5rem;
+                    color: white;
                 }
             }
-        }
 
-        .album {
-            border-radius: 10px;
-            background-color: #e3e3e3;
-            filter: drop-shadow(0px 14px 10px #00000025);
-            max-width: 300px;
-        }
+            i {
+                font-size: 1.4rem;
+            }
 
-        .selection {
-            background-color: #FFF;
-            z-index: 10;
-            
-            nav {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background-color: #FFF;
-                border-radius: 20px 20px;
-
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 20px 50px;
-
-                filter: drop-shadow(0 -8px 8px #00000005);
-
-                .router-link {
+            .search-box {
+                form {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     justify-content: center;
-                    row-gap: 4px;
-                }
+                    align-items: center;
+                    column-gap: 10px;
 
-                i {
-                    font-size: 1.4rem;
-                    transition: all .2s ease-in;
+                    input {
+                        border-radius: 100px;
+                        border: none;
+                        padding: 14px 14px;
+                        min-width: 450px;
+                        // max-width: 400px;
+                        width: 100%;
+                        text-align: center;
+                        filter: drop-shadow(0 2px 4px #97d6ff10);
 
-                    &:hover {
-                        color: #e3e3e3;
+                        &::placeholder {
+                            color: #60a8db70;
+                            text-align: center;
+                        }
                     }
                 }
             }
 
-            p {
-                font-size: 12px;
-                font-weight: 300;
+            .nav-bar {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                column-gap: 16px;
+
+                i {
+                    transition: all .2s ease-in;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #0088ff;
+                    }
+                }
+            }
+        }
+
+        .views {
+            .music-page {
+                .music-details {
+                    margin: 80px 0;
+                    display: grid;
+                    grid-template-columns: auto 700px;
+                    justify-content: center;
+                    column-gap: 50px;
+                }
+
+                .album {
+                    padding: 20px;
+                    background-color: #00000020;
+                    border-radius: 30px;
+                    max-width: 400px;
+
+                    img {
+                        max-width: 400px;
+                        max-height: 400px;
+                        border-radius: 24px;
+                        // filter: drop-shadow(0 6px 10px #97d6ff50);
+                        filter: drop-shadow(0 6px 10px #00000020);
+                    }
+
+                    .controller {
+                        max-width: 400px;
+                        align-items: center;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        // padding: 0 10px;
+
+                        .controller-items {
+                            margin: 20px 0;
+
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            i {
+                                font-size: 2rem;
+                                // color: white;
+                                color: #0088ff;
+                            }
+                        }
+
+                        .skip-left {
+                            transform: rotate(180deg);
+                        }
+
+                        button {
+                            font-weight: 500;
+                            color: #0088ff;
+                            font-size: 14px;
+                            background-color: white;
+                            padding: 10px 14px;
+                            border-radius: 10px;
+                            filter: drop-shadow(0 2px 4px #00000010);
+                            transition: .3s;
+
+                            &:hover {
+                                background-color: #0088ff;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    // Inner Blur Motion
+                    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                        .album {
+                            -webkit-backdrop-filter: blur(15px);
+                            backdrop-filter: blur(15px);
+                            // filter: drop-shadow(0 10px 3px #00407820);
+                            filter: drop-shadow(0 10px 3px #00000020);
+                        }
+                    }
+                }
+
+                .current-album-songs {
+                    text-align: left;
+                    max-height: 500px;
+                    position: relative;
+
+                    .album-title {
+                        h3 {
+                            font-size: 2.4rem;
+                            font-weight: 700;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            // color: #00000050;
+                            padding: 10px 0;
+                        }
+                    }
+
+                    .music-lists {
+                        margin: 50px 0 0 0;
+                        max-height: 400px;
+                        overflow-y: scroll;
+                        scrollbar-width: none;
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            row-gap: 10px;
+
+                            li {
+                                padding: 18px 20px;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                transition: all .2s ease-in;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+
+                                &:hover {
+                                    background-color: #0088ff;
+
+                                    span {
+                                        color: white;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+
+                            .selected {
+                                background-color: #0088ff;
+                                align-items: center;
+
+                                span {
+                                    color: white;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .show-lyrics {
+                    text-align: left;
+                    // max-height: 430px;
+                    // width: 700px;
+
+                    position: absolute;
+                    top: 20%;
+                    left: 0;
+                    right: 0;
+
+                    background-color: white;
+
+                    .song-title {
+                        margin-bottom: 20px;
+                        
+                        h3 {
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                        }
+
+                        p {
+                            padding: 8px 0;
+                        }
+                    }
+
+                    .lyrics-heading {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    
+                    .btn-change-fontsize {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        column-gap: 10px;
+
+                        span {
+                            font-size: 14px;
+                            padding: 14px 10px;
+                        }
+
+                        .btn-font.active {
+                            transition: .5s;
+                            font-weight: 600;
+                            color: #0088ff;
+                            background-color: white;
+                            padding: 10px 14px;
+                            border-radius: 10px;
+                            filter: drop-shadow(0 2px 4px #00000020);
+                            z-index: 30;
+                        }
+                    }
+
+                    .lyrics-box {                        
+                        .lyrics-content {
+                            overflow-y: scroll;
+                            scrollbar-width: none;
+                            max-height: 350px;
+                            width: 700px;
+
+                            p {
+                                line-height: 38px;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .home-page {
+                .recommendation {
+                    margin: 50px 0;
+
+                    .recommendation-heading {
+                        margin: 20px 0;
+
+                        h3 {
+                            text-align: left;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .rec-slider {
+                        .rec-slides {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            column-gap: 40px;
+                            // height: 400px;
+                            transition: transform .5s ease-in-out;
+
+                            .rec-slide {
+                                flex-shrink: 0;
+    
+                                img {
+                                    width: 300px;
+                                    height: 300px;
+                                    object-fit: cover;
+                                    border-radius: 20px;
+                                    filter: drop-shadow(0 8px 8px #00000020);
+                                    transition: .2s ease-in;
+                                    cursor: pointer;
+                                }
+    
+                                .song-details {
+                                    margin: 10px 0;
+                                    display: flex;
+                                    flex-direction: column;
+                                    row-gap: 8px;
+                                    text-align: left;
+    
+                                    h3, p {
+                                        transition: all .2s ease-in;
+                                        cursor: pointer;
+                                    }
+    
+                                    h3 {
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+    
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+    
+                                &:hover {
+                                    img {
+                                        transform: scale(.95);
+                                        filter: brightness(.8);
+                                    }
+    
+                                    .song-details {
+                                        h3, p {
+                                            color: #0088ff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .billboard-topchart {
+                    margin: 50px 0;
+
+                    .billboard-heading {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin: 20px 0;
+                        align-items: center;
+
+                        h3 {
+                            font-weight: 600;
+                        }
+
+                        .slider-buttons {
+                            display: flex;
+                            flex-direction: row;
+                            column-gap: 10px;
+
+                            i {
+                                font-size: 1.4rem;
+                                padding: 10px;
+                                background-color: white;
+                                border-radius: 100px;
+                                color: #0088ff;
+                                filter: drop-shadow(0 4px 4px #0088ff20);
+                                transition: all .3s ease-in;
+
+                                &:hover {
+                                    background-color: #0088ff;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    .slider {
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+
+                        .slides {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            column-gap: 40px;
+                            height: 400px;
+                            transition: transform .5s ease-in-out;
+
+                            .each-chart {
+                                flex-shrink: 0;
+
+                                img {
+                                    width: 300px;
+                                    height: 300px;
+                                    object-fit: cover;
+                                    border-radius: 20px;
+                                    filter: drop-shadow(0 8px 8px #00000020);
+                                    transition: .2s ease-in;
+                                    cursor: pointer;
+                                }
+
+                                .song-details {
+                                    margin: 10px 0;
+                                    display: flex;
+                                    flex-direction: column;
+                                    row-gap: 8px;
+                                    text-align: left;
+
+                                    h3, p {
+                                        transition: all .2s ease-in;
+                                        cursor: pointer;
+                                    }
+
+                                    h3 {
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                    }
+
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                &:hover {
+                                    img {
+                                        transform: scale(.95);
+                                        filter: brightness(.8);
+                                    }
+
+                                    .song-details {
+                                        h3, p {
+                                            color: #0088ff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
