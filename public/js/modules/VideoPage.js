@@ -1,17 +1,25 @@
 export default {
     template: `
-    <section>
-        <!-- <h2>{{ message }}</h2> -->
+    <section class="video-page">
+        <div class="video-heading">
+            <h3>Stream</h3>
+        </div>
 
-        
+        <div class="video-content">
+            <div>
+                <video controls>
+                    <source src="./public/includes/.mp4" type="video/mp4">
+                    <track kind="captions" src="/captions/sample.vtt" srclang="en" label="English Captions">
+                </video>
 
-        <!-- <button @click="registerUser">Register for Awesome Swag!</button> -->
+                <div class="transcript"></div>
+            </div>
+        </div>
     </section>
     `,
 
-    data: function() {
+    data() {
         return {
-            // message: "Welcome to my Super Awesome App!"
         }
     },
 

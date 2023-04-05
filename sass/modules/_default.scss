@@ -379,6 +379,8 @@ main {
 
         .views {
             .music-page {
+                padding: 100px 0 100px 0;
+
                 .music-details {
                     margin: 80px 0;
                     display: grid;
@@ -388,10 +390,11 @@ main {
                 }
 
                 .album {
-                    padding: 20px;
-                    background-color: #00000020;
+                    padding: 26px 26px 30px 26px;
+                    background-color: #e1e1e1;
                     border-radius: 30px;
                     max-width: 400px;
+                    filter: drop-shadow(10px 20px 10px #00000030);
 
                     img {
                         max-width: 400px;
@@ -409,34 +412,34 @@ main {
                         flex-direction: row;
                         justify-content: space-between;
 
-                        // padding: 0 10px;
+                        .song-info {
+                            text-align: left;
+                            font-size: 14px;
+                            margin: 14px 0 0 0;
 
-                        .controller-items {
-                            margin: 20px 0;
-
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-
-                            i {
-                                font-size: 2rem;
-                                // color: white;
-                                color: #0088ff;
+                            h3 {
+                                font-size: 26px;
+                                font-weight: 600;
+                                color: #002646;
                             }
-                        }
 
-                        .skip-left {
-                            transform: rotate(180deg);
+                            h4, h5 {
+                                color: #00264650;
+                            }
+
+                            h3, h4, h5 {
+                                padding-top: 4px;
+                            }
                         }
 
                         button {
                             font-weight: 500;
-                            color: #0088ff;
+                            color: #002646;
                             font-size: 14px;
                             background-color: white;
                             padding: 10px 14px;
                             border-radius: 10px;
+
                             filter: drop-shadow(0 2px 4px #00000010);
                             transition: .3s;
 
@@ -514,6 +517,7 @@ main {
                                 span {
                                     color: white;
                                     font-weight: 500;
+                                    align-items: center;
                                 }
                             }
                         }
@@ -522,8 +526,6 @@ main {
 
                 .show-lyrics {
                     text-align: left;
-                    // max-height: 430px;
-                    // width: 700px;
 
                     position: absolute;
                     top: 20%;
@@ -580,7 +582,7 @@ main {
                         .lyrics-content {
                             overflow-y: scroll;
                             scrollbar-width: none;
-                            max-height: 350px;
+                            max-height: 400px;
                             width: 700px;
 
                             p {
@@ -588,6 +590,58 @@ main {
                                 transition: .5s;
                             }
                         }
+                    }
+                }
+
+                .controller-bar {
+                    background-color: #00000010;
+
+                    border-top-right-radius: 20px;
+                    border-top-left-radius: 20px;
+
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 40px 0 20px 0;
+
+                    .controller-bar-status {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 10px 50px 0 50px;
+                        z-index: 100;
+                        
+                        .controller-nav {
+                            align-items: center;
+                        }
+
+                        button {
+                            i {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+
+                    .progress-bar {
+                        margin: 0 50px;
+                        height: 8px;
+                        background-color: #002646;
+                        border-radius: 100px;
+                    }
+                    
+                    .time-remaining {
+                        font-size: 14px;
+                    }
+                }
+
+                // Inner Blur Motion
+                @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                    .controller-bar {
+                        -webkit-backdrop-filter: blur(15px);
+                        backdrop-filter: blur(15px);
+                        // filter: drop-shadow(0 -2px 4px #00000020);
                     }
                 }
             }
@@ -765,6 +819,16 @@ main {
                             }
                         }
                     }
+                }
+            }
+
+            .video-page {
+                .video-heading {
+
+                }
+
+                .video-content {
+                    
                 }
             }
         }

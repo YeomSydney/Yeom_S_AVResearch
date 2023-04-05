@@ -6,10 +6,10 @@ export default {
                 <img src="./public/images/music-album-anne-marie.jpg">
 
                 <div class="controller">
-                    <div class="controller-items">
-                        <i class="ri-arrow-left-s-fill"></i>
-                        <i class="ri-play-circle-line"></i>
-                        <i class="ri-arrow-right-s-fill"></i>
+                    <div class="song-info">
+                        <h3>2002</h3>
+                        <h4>Speak Your Mind</h4>
+                        <h5>Anne Marie</h5>
                     </div>
 
                     <div class="btn-lyrics">
@@ -27,8 +27,8 @@ export default {
 
                     <div class="music-lists">
                         <ul>
-                            <li class="selected">
-                                <span>1. 2002</span><span>3:07</span>
+                            <li class="selected" @click="play">
+                                <span>1. 2002 <i class="ri-bar-chart-fill"></i></span><span>3:14</span>
                             </li>
 
                             <li>
@@ -171,19 +171,115 @@ export default {
                 </div>
             </div>
         </div>
+
+        <div class="controller-bar">
+            <div class="audio">
+                <audio ref="audio" :src="audioSrc" @timeupdate="updateTime" :loop="loop"></audio>
+            </div>
+
+            <div>
+                <div class="progress-bar" :style="{ width: progress + '%' }"></div>
+            </div>
+
+            <div class="controller-bar-status">
+                <div class="controller-nav">
+                    <button @click="rewind">
+                        <i class="ri-skip-back-line"></i>
+                    </button>
+
+                    <button @click="play">
+                        <i class="ri-play-mini-fill"></i>
+                    </button>
+
+                    <button @click="pause">
+                        <i class="ri-pause-mini-fill"></i>
+                    </button>
+
+                    <button @click="forward">
+                        <i class="ri-skip-forward-line"></i>
+                    </button>
+
+                    <button @click="stop">Stop</button>
+                    
+                    <button @click="loopAudio">
+                        {{ loop ? 'Disable' : 'Enable' }} Loop
+                    </button>
+                </div>
+                
+                <div class="time-remaining">
+                    {{ timeRemaining }}
+                </div>
+            </div>
+        </div>
     </section>
     `,
 
     data() {
         return {
             showLyrics: false,
-            fontSize: '1rem'
+            fontSize: '1rem',
+            audioSrc: "./public/includes/2002-anne-marie.mp3",
+            audio: null,
+            duration: 0,
+            currentTime: 0,
+            loop: false
+        }
+    },
+
+    computed: {
+        progress() {
+          return (this.currentTime / this.duration) * 100;
+        },
+
+        timeRemaining() {
+        let remainingTime = this.duration - this.currentTime;
+        let minutes = Math.floor(remainingTime / 60);
+        let seconds = Math.floor(remainingTime % 60);
+
+        return minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
         }
     },
 
     methods: {
         setFontSize(size) {
             this.fontSize = size + 'rem';
+        },
+
+        play() {
+            this.audio.play();
+        },
+
+        pause() {
+            this.audio.pause();
+        },
+        
+        rewind() {
+            this.audio.currentTime -= 10;
+        },
+        
+        forward() {
+            this.audio.currentTime += 10;
+        },
+        
+        stop() {
+            this.audio.pause();
+            this.audio.currentTime = 0;
+            this.currentTime = 0;
+            this.duration = 0;
+        },
+
+        loopAudio() {
+            this.loop = !this.loop;
+            this.audio.loop = this.loop;
+        },
+        
+        updateTime(event) {
+            this.currentTime = event.target.currentTime;
+            this.duration = event.target.duration;
         }
     },
+
+    mounted() {
+        this.audio = this.$refs.audio;
+    }
 }
