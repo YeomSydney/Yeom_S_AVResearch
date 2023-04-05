@@ -3,7 +3,7 @@ export default {
     <section class="home-page">
         <div class="recommendation">
             <div class="recommendation-heading">
-                <h3>April's Recommendation</h3>
+                <i class="ri-fire-line"></i><h3>April's Recommendation</h3>
             </div>
 
             <div class="rec-slider">
